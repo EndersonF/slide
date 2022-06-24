@@ -1,5 +1,19 @@
 body {
   margin: 0px;
+  padding: 0px;
+  -webkit-font-smoothing: antialiased;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.title {
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
+  font-weight: 400;
+  color: #e54;
+  padding: 0px;
+  margin: 0px;
+  font-family: 'Mansalva', monospace;
+  text-align: center;
 }
 
 ul {
@@ -11,6 +25,8 @@ ul {
 img {
   display: block;
   max-width: 100%;
+  width: auto;
+  height: auto;
 }
 
 .slide-wrapper {
@@ -57,11 +73,6 @@ img {
   overflow: hidden;
   text-indent: -999px;
   margin: 5px;
-}
-
-[data-control='slide'] li.active a,
-[data-control='slide'] li:hover a {
-  background: #f0a30a;
 }
 
 .custom-controls {
@@ -115,4 +126,36 @@ img {
   border-radius: 8px;
   padding: 6px 12px;
   background-color: #8e44ad;
+}
+
+.copy {
+  background: #000;
+  margin-bottom: 1rem;
+}
+
+.copy p {
+  padding: 12px;
+  font-family: 'Mansalva', monospace;
+  font-weight: 400;
+  color: #fff;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .title {
+    font-size: 2rem;
+  }
+  .custom-controls li {
+    width: 30px;
+    height: 30px;
+  }
+  .custom-controls li.active {
+    width: 40px;
+    height: 40px;
+  }
+  .arrow-nav button {
+    width: 30px;
+    height: 30px;
+  }
 }
